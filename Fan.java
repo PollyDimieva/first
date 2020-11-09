@@ -2,11 +2,11 @@ package edu;
 
 public class Fan {
 
-	final int slow =1;
-	final int medium=2;
-	final int fast=3;
+	final int SLOW =1;
+	final int MEDIUM=2;
+	final int FAST=3;
 	
-	private int speed=slow;
+	private int speed=SLOW;
 	private boolean switchedOn=false;
 	private double radius=5;
 	private String color = "blue";
@@ -40,12 +40,24 @@ public class Fan {
 		switchedOn=true;
 	}
 	
-	public void speedUp() {
-		speed++;
+	public void speedMax() {
+		speed=FAST;
 	}
-	public void speedDown() {
-		speed--;
+	public void speedMedium() {
+		speed=MEDIUM;
 	}
+	
+	public void speedSlow() {
+		speed=SLOW;
+	}
+	
+	
+	public void turnOff() {
+		switchedOn=false;
+	}
+	
+	
+	
 }
 
 
