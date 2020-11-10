@@ -8,7 +8,7 @@ RegularPolygon p1 = new RegularPolygon();
 RegularPolygon p2 = new RegularPolygon();
 		
 		p1.setN(6);
-		p1.setSideLength(4);
+		p1.setSideLength(4.7);
 		
 		p2.setN(10);
 		p2.setSideLength(4);
@@ -26,7 +26,8 @@ RegularPolygon p2 = new RegularPolygon();
 	}
 	public static void getPerimeter(RegularPolygon p) {
 		double perimeter = p.getN()*p.getSideLength();
-		System.out.println("P = "+perimeter);
+		double perimeter1 = (double)Math.round(perimeter*100)/100;
+		System.out.println("P = "+perimeter1);
 		
 	}
 	public static void getArea(RegularPolygon p) {
@@ -35,9 +36,9 @@ RegularPolygon p2 = new RegularPolygon();
 		double tanValue=Math.tan(radians);
 		double cotanValue = 1/tanValue;
 		double аrea=p.getN()*p.getSideLength()*p.getSideLength()*cotanValue/4;
+		double area1 = (double)Math.round(аrea*100)/100;
 		
-		
-		System.out.println("S = "+аrea);
+		System.out.println("S = "+area1);
 		
 	}
 }
