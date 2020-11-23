@@ -12,31 +12,18 @@ public class ATM1 {
 		
 		for(int i=0;i<10;i++) {
 		
-			ATM(a);
-			break;
+			a[i]=new Account(i,100.0);
 		}
 
-		
-		
-	}
-		
-		 static void ATM(Account[] a) {
-			Scanner sc = new Scanner(System.in);
-			
-			
-		for(int i=0;i<10;i++) {
+		while (true) {
 			
 		
 			System.out.println("Enter ID: ");
-			int p = sc.nextInt();
-			
-			a[i]=new Account();
-			a[i].setBalance(100.0);
-
-			a[i].setID(p);
-			if(a[i].getID()>9) {
+			int id = sc.nextInt();
+		
+			if(id>9|| id<0) {
 				System.out.println("Please enter a valid ID");
-				continue;
+				
 		}else {
 				//menu on show
 				
@@ -45,23 +32,23 @@ public class ATM1 {
 				
 				
 				if(pressedNum==1) {
-					System.out.println("Your balance is "+a[i].getBalance());
+					System.out.println("Your balance is "+a[id].getBalance());
 					
 					
 				}else if(pressedNum==2) {
 					double withdrawedSum = sc.nextDouble();
-				a[i].withdraw(withdrawedSum);
-					System.out.println("Your balance is now "+a[i].getBalance());
+				a[id].withdraw(withdrawedSum);
+					System.out.println("Your balance is now "+a[id].getBalance());
 					
 					
 				}else if(pressedNum == 3) {
 					double depositedSum=sc.nextDouble();
-					a[i].deposit(depositedSum);
-					System.out.println("Your balance is now "+a[i].getBalance());
+					a[id].deposit(depositedSum);
+					System.out.println("Your balance is now "+a[id].getBalance());
 					
 					
 				}else if(pressedNum == 4) {
-					System.out.println("You have left the system.");
+					System.out.println("You have left the main menu.");
 					
 					
 				}else {
