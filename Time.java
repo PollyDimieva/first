@@ -11,8 +11,8 @@ public class Time {
 	
 	Time(){
 		long currentTime = System.currentTimeMillis();
-		currentTime = currentTime + 3600000*5;
-		currentTime = currentTime + 60000*30;
+		//currentTime = currentTime + 3600000*2;
+		//currentTime = currentTime + 60000;
 		
 		setTime(currentTime);
 	}
