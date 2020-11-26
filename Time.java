@@ -11,14 +11,13 @@ public class Time {
 	
 	Time(){
 		long currentTime = System.currentTimeMillis();
-		//currentTime = currentTime + 3600000*2;
-		//currentTime = currentTime + 60000;
+		
 		
 		setTime(currentTime);
 	}
 	
 	
-	public Time(int hours, int minutes, int seconds){
+	 Time(int hours, int minutes, int seconds){
 		this.hours = hours;
 		this.minutes = minutes;
 		this.seconds = seconds;
