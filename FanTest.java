@@ -12,27 +12,16 @@ Fan fan2 =new Fan();
 fan1.speedMax();
 fan1.setRadius(10);
 fan1.setColor("yellow");
-
-fan1.turnOn();
+fan1.setSwitchedOn(true);
 
 fan2.speedMedium();
-fan2.setRadius(5);
-fan2.setColor("blue");
+fan2.setSwitchedOn(false);
 
 fan2.turnOff();
 
-
-		toString(fan1);
-		toString(fan2);
+System.out.println(fan1.toString());
+System.out.println(fan2.toString());
 	}
-	public static void toString(Fan fan) {
-		if(!fan.isSwitchedOn()) {
-			String descriptionOn=fan.getColor()+" "+String.valueOf(fan.getRadius())+" Вентилаторът е изключен.";
-			System.out.println(descriptionOn);
-		}else {
-			String descriptionOff=String.valueOf(fan.getSpeed())+" "+fan.getColor()+" "+String.valueOf(fan.getRadius());
-			System.out.println(descriptionOff);
-		}
-	}
+	
 	
 }
