@@ -19,8 +19,12 @@ public boolean turnedOn;
 		turnedOn=true;
 	}
 	
+	public void switchOff() {
+		turnedOn=false;
+	}
+	
    public void setChannel(int newChannel) {
-	   if(newChannel>120 || newChannel < 0 || !turnedOn) {
+	   if(newChannel>120 || newChannel < 1 || !turnedOn) {
 		   return;
 	   }
 	   channel=newChannel;
