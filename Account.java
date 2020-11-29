@@ -62,11 +62,7 @@ public void deposit(double depositSum) {
 	
 }
 
-public static void setYearInterestRate(double aYearInterestRate) {
-	// TODO Auto-generated method stub
-     yearInterestRate=aYearInterestRate;
-//      ???
-}
+
 
 
 }
