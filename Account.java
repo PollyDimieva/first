@@ -14,7 +14,8 @@ public Account() {
 }
 
 public Account(int id, double balance) {
-	
+	this.setID(id);
+	this.setBalance(balance);
 }
 public int getID() {
 	return id;
@@ -66,4 +67,6 @@ public static void setYearInterestRate(double aYearInterestRate) {
      yearInterestRate=aYearInterestRate;
 //      ???
 }
+
+
 }
