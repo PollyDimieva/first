@@ -35,7 +35,15 @@ public class Fan {
 	public void setColor(String color) {
 		this.color = color;
 	}
-	
+	public String toString() {
+		String On = new String("Speed: " + speed + " Color: "+color + " Radius: "+radius);
+		String Off = new String("Color: "+color + " Radius: "+radius+" The Fan is turned off.");
+		if(switchedOn) {
+			return On;
+		}else {
+			return Off;
+		}
+	}
 	public void turnOn() {
 		switchedOn=true;
 	}
