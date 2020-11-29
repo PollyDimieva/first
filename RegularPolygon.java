@@ -65,22 +65,6 @@ public void setSideLength(double sideLength) {
 		double area1 = (double)Math.round(аrea*100)/100;
 		return area1;
  }
-//	double perimeter = p.getN()*p.getSideLength();
-//	double perimeter1 = (double)Math.round(perimeter*100)/100;
-//	return perimeter1;
-//	
-//}
-//public double getArea(RegularPolygon p) {
-//	double degrees=180/p.getN();
-//	double radians=Math.toRadians(degrees);
-//	double tanValue=Math.tan(radians);
-//	double cotanValue = 1/tanValue;
-//	double аrea=p.getN()*p.getSideLength()*p.getSideLength()*cotanValue/4;
-//	double area1 = (double)Math.round(аrea*100)/100;
-//	
-//	return area1;
-//	
-//}
 
 
 }
