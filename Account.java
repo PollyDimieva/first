@@ -5,7 +5,7 @@ public class Account {
 	
 private int id=0;
 private  double balance=0;
-private static double yearInterestRate=0;
+private static double yearInterestRate=4.5;
 
 private Date dateCreated = new Date();
 
@@ -32,6 +32,14 @@ public void setBalance(double balance) {
 
 public Date getDateCreated() {
 	return dateCreated;
+}
+	
+public static double getYearInterestRate() {
+	return yearInterestRate;
+}
+
+public static void setYearInterestRate(double aYearInterestRate) {
+	yearInterestRate = aYearInterestRate;
 }
 
 public static double getMonthlyInterestRate() {
@@ -62,11 +70,7 @@ public void deposit(double depositSum) {
 	
 }
 
-public static void setYearInterestRate(double aYearInterestRate) {
-	// TODO Auto-generated method stub
-     yearInterestRate=aYearInterestRate;
-//      ???
-}
+
 
 
 }
