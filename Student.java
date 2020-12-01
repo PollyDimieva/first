@@ -1,16 +1,26 @@
-package edu;
+package inheritance;
 
-public class Student {
-    
-	public String name;
-	public double grades;
+public class Student extends Person{
+
+	private String classStatus;
 	
-	public Student(){
-		
+	
+	
+	public Student(String name, String adress, String phoneNum, String email, String classStatus) {
+		super(name, adress, phoneNum,email);
+		this.classStatus =classStatus;
 	}
-	public Student(String name, double grades) {
-		this.name=name;
-		this.grades=grades;
+
+	public String getClassStatus() {
+		return classStatus;
+	}
+
+	public void setClassStatus(String classStatus) {
+		this.classStatus = classStatus;
+	}
+	
+	public String toString() {
+		return super.toString() + " , Class status: "+classStatus;
 	}
 	
 }
