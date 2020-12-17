@@ -6,6 +6,17 @@ public class myPoint {
 	private double x=0;
 	private double y=0;
 	
+	
+	myPoint(){
+		
+	}
+	
+	myPoint(double x,double y){
+		this.x=x;
+		this.y=y;     //може и със сетърите
+	}
+	
+	
 	public double getX() {
 		return x;
 	}
@@ -18,16 +29,6 @@ public class myPoint {
 	public void setY(double y) {
 		this.y = y;
 }
-	
-	
-	myPoint(){
-		
-	}
-	
-	myPoint(double x,double y){
-		this.x=x;
-		this.y=y;
-	}
 	
 	
 	public double distance(myPoint a) {
