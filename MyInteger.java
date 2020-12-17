@@ -4,77 +4,50 @@ public class MyInteger {
 	
 private int value=0;
 
-public int getValue() {
-	return value;
+
+public MyInteger(int value) {
+	this.value=value;
 }
-public MyInteger(int value1) {
-	value=value1;
+
+
+
+public int getValue() {
+	return value; 
 }
 	
 public boolean isEven() {
-	
-	if(value%2==0) {
-		return true;
-	}else {
-		return false;
-	}
-	
+	return MyInteger.isEven(this.value);
 }
 	
-	public boolean isOdd() {
-	
-		if(value%2==1) {
-			return true;
-		}else {
-			return false;
-		}
+public boolean isOdd() {
+	 return MyInteger.isOdd(this.value);
 	}
-	
-	public boolean isPrime() {
-		boolean isPrime=true;
-		int maxDivider = (int)Math.ceil(Math.sqrt(value));	
-		
-		for(int i=2;i<=maxDivider;i++) {
-			if(value%i==0) {
-				isPrime=false;
-				break;
-			}
-		}
-		return isPrime;
-		
-		
+	       
+public boolean isPrime() {
+	return	MyInteger.isPrime(this.value);	
 		
 	}
-	public static boolean isEven(int myInt) {
+public static boolean isEven(int value) {
+	return value%2==0;
 	
-		if(myInt%2==0) {
-			return true;
-		}else {
-			return false;
-		}
 		
 	}
 		
-		public static boolean isOdd(int myInt) {
-			
-			if(myInt%2==1) {
-				return true;
-			}else {
-				return false;
-			}
+public static boolean isOdd(int value) {
+			return value%2==1;
 		}
 		
-		public static boolean isPrime(int myInt) {
-			boolean isPrime=true;
-			int maxDivider = (int)Math.ceil(Math.sqrt(myInt));	
+public static boolean isPrime(int value) {
+	
+			int maxDivider = (int)Math.ceil(Math.sqrt(value));	
 			
 			for(int i=2;i<=maxDivider;i++) {
-				if(myInt%i==0) {
-					isPrime=false;
-					break;
+				if(value%i==0) {
+		
+					return false;
 				}
 			}
-			return isPrime;
+			return true;
 			
 			
 			
@@ -84,17 +57,17 @@ public boolean isEven() {
 	
 		
 	
-	public static boolean isEven(MyInteger myInt) {
-		return myInt.isEven();
+	public static boolean isEven(MyInteger value) {
+		return MyInteger.isEven(value.getValue());
 	}
 		
-		public static boolean isOdd(MyInteger myInt) {
-			return myInt.isOdd();
+		public static boolean isOdd(MyInteger value) {
+			return MyInteger.isOdd(value.getValue());
 		}
 		
-		public static boolean isPrime(MyInteger myInt) {
+		public static boolean isPrime(MyInteger value) {
 			
-			return myInt.isPrime();
+			return MyInteger.isPrime(value.getValue());
 			
 		}
 	
@@ -117,11 +90,7 @@ public boolean isEven() {
 	
 	
 	public static int parseInt(char[]values ) {
-		int sum=0;
-		for(char i:values) {
-			sum+=Character.getNumericValue(i);
-	}return sum;
-	
+	return MyInteger.parseInt(new String (values));
 }
 	
 	public static int parseInt (String value) {
